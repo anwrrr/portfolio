@@ -1,3 +1,6 @@
+/* Clear visual separation now that About and Work sit next to each other. */
+.work-section { border-top: 1px solid #d1ddd3; }
+
 /* Keep the portrait and message legible through the tablet transition. */
 @media (min-width: 761px) and (max-width: 950px) {
   .hero-grid {
@@ -20,11 +23,62 @@
   .floating-card { left: -44px; }
 }
 
+/* Give content columns more room on tablets. */
+@media (min-width: 761px) and (max-width: 950px) {
+  .about-grid,
+  .section-intro,
+  .client-project-body,
+  .feature-body,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-grid { gap: 14px; }
+  .about-grid h2 { margin-bottom: 12px; }
+  .about-copy { max-width: 680px; padding-top: 0; }
+  .section-intro { gap: 6px; }
+  .section-intro .section-kicker { margin-top: 0; }
+  .client-project-body > div:nth-child(2) { padding-top: 22px; }
+  .feature-details { padding-top: 38px; }
+  .feature-body h3 { font-size: clamp(3.8rem, 8vw, 5.5rem); }
+  .project-card { min-height: 350px; }
+}
+
+/* Mobile navigation and calls to action stay easy to read and tap. */
+@media (max-width: 760px) {
+  .nav-row { height: auto; flex-wrap: wrap; gap: 14px; padding-block: 15px 11px; }
+  .brand-name { display: inline; }
+  .site-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 9px;
+    border-top: 1px solid var(--line);
+    justify-content: space-between;
+  }
+  .site-nav a { font-size: 14px; padding-block: 5px; }
+  .nav-cta { display: inline-flex; margin-left: auto; padding: 7px 10px; font-size: 13px; }
+  .hero-grid { padding-block: 47px 55px; }
+  .hero-note { margin-top: 30px; }
+  .hero-visual { margin-top: 43px; }
+  .hero-actions { gap: 16px; }
+  .button-primary,
+  .button-dark { width: 100%; }
+}
+
 /* Long project names need to fit the narrowest phone screens. */
 @media (max-width: 420px) {
   .feature-body h3 { font-size: clamp(2.3rem, 11vw, 3.3rem); }
+  .brand-name { font-size: 14px; }
+  .brand { gap: 10px; }
+  .floating-card {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    margin-top: 16px;
+    box-shadow: none;
+  }
 }
 @media (max-width: 360px) {
   .hero h1 { font-size: 3.25rem; }
-  .floating-card { left: -18px; }
+  .nav-cta { padding-inline: 8px; }
 }
