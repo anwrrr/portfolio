@@ -70,7 +70,7 @@ projectFilters.forEach((button) => {
     const visibleGridCards = [...projectGrid.querySelectorAll('.project-card:not([hidden])')];
     projectGrid.hidden = visibleGridCards.length === 0;
     projectGrid.classList.toggle('single-visible', visibleGridCards.length === 1);
-    const labels = { all: 'projects', client: 'client project', web: 'applications', ai: 'AI and vision projects' };
+    const labels = { all: 'projects', client: `client project${count === 1 ? '' : 's'}`, web: 'applications', ai: 'AI and vision projects' };
     projectResults.textContent = filter === 'all'
       ? `Showing all ${count} projects`
       : `Showing ${count} ${labels[filter]}`;
