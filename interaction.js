@@ -1,5 +1,55 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const siteHeader = document.querySelector('.site-header');
+const navigationLinks = [...document.querySelectorAll('.site-nav a, .nav-cta')];
+const navigationSections = [...document.querySelectorAll('#about, #work, #services, #contact')];
+let navigationFrame = 0;
+
+function updateNavigation() {
+  siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);
+  const marker = siteHeader.getBoundingClientRect().bottom + 48;
+  let activeSection = '';
+  navigationSections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= marker) activeSection = section.id;
+  });
+  navigationLinks.forEach((link) => {
+    if (link.hash === `#${activeSection}` && activeSection) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+  navigationFrame = 0;
+}
+
+function scheduleNavigationUpdate() {
+  if (!navigationFrame) navigationFrame = requestAnimationFrame(updateNavigation);
+}
+
+window.addEventListener('scroll', scheduleNavigationUpdate, { passive: true });
+window.addEventListener('resize', scheduleNavigationUpdate);
+updateNavigation();
+
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+
+  document.documentElement.classList.add('motion-ready');
+  document.querySelectorAll('[data-reveal]').forEach((element) => {
+    element.addEventListener('focusin', () => {
+      element.classList.add('is-visible');
+      revealObserver.unobserve(element);
+    }, { once: true });
+    revealObserver.observe(element);
+  });
+}
+
 const projectCards = [...document.querySelectorAll('[data-project-categories]')];
 const projectFilters = [...document.querySelectorAll('.project-filter')];
 const projectGrid = document.querySelector('.project-grid');
@@ -24,6 +74,7 @@ projectFilters.forEach((button) => {
     projectResults.textContent = filter === 'all'
       ? `Showing all ${count} projects`
       : `Showing ${count} ${labels[filter]}`;
+    scheduleNavigationUpdate();
   });
 });
 

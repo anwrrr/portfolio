@@ -56,7 +56,7 @@
     <section class="expertise-band" aria-label="Core technologies"><div class="container expertise-inner"><span>WHAT I WORK WITH</span><div><span>Angular</span><i></i><span>HTML / CSS / JavaScript</span><i></i><span>ASP.NET Core</span><i></i><span>SQL Server</span><i></i><span>Applied AI</span></div></div></section>
 
     <section class="section about-section" id="about" aria-labelledby="about-title">
-      <div class="container about-grid">
+      <div class="container about-grid" data-reveal>
         <div><p class="section-kicker">01 / ABOUT ME</p><h2 id="about-title">A developer who<br><em>teaches, too.</em></h2></div>
         <div class="about-copy">
           <p class="about-lead">I’m a full-stack developer, computer science graduate from Assiut University, and Teaching Assistant at Badr University in Assiut.</p>
@@ -70,8 +70,8 @@
 
     <section class="section work-section" id="work" aria-labelledby="work-title">
       <div class="container">
-        <div class="section-intro"><p class="section-kicker">02 / SELECTED WORK</p><div><h2 id="work-title">Proof in the<br><em>build.</em></h2><p>Client delivery and technical projects spanning the interface people use and the systems that keep it running.</p></div></div>
-        <div class="project-browser" role="group" aria-label="Filter projects">
+        <div class="section-intro" data-reveal><p class="section-kicker">02 / SELECTED WORK</p><div><h2 id="work-title">Proof in the<br><em>build.</em></h2><p>Client delivery and technical projects spanning the interface people use and the systems that keep it running.</p></div></div>
+        <div class="project-browser" role="group" aria-label="Filter projects" data-reveal>
           <span class="project-browser-label">EXPLORE BY FOCUS</span>
           <div class="project-filters">
             <button type="button" class="project-filter" data-filter="all" aria-pressed="true">All projects <span>04</span></button>
@@ -81,20 +81,20 @@
           </div>
           <p class="project-results" id="project-results" role="status" aria-live="polite">Showing all 4 projects</p>
         </div>
-        <article class="client-project" data-project-categories="client web" aria-labelledby="client-project-title">
+        <article class="client-project" data-project-categories="client web" data-reveal aria-labelledby="client-project-title">
           <div class="client-project-heading"><span>CLIENT WORK / PRIVATE PROJECT</span><span>FULL-STACK DELIVERY</span></div>
           <div class="client-project-body">
             <div><span class="client-project-mark" aria-hidden="true">C<span>.</span></span><h3 id="client-project-title">Private ERP platform</h3><p>A business system covering inventory, sales, invoicing, reporting, and user access. The client’s name and implementation details remain private.</p></div>
             <div><span class="client-project-label">MY CONTRIBUTION</span><p>I worked across the frontend and backend, building user-facing workflows and the services behind the ERP’s core features.</p><div class="client-project-tags"><span>Frontend</span><span>Backend</span><span>Business workflows</span></div></div>
           </div>
         </article>
-        <article class="feature-project" data-project-categories="web ai">
+        <article class="feature-project" data-project-categories="web ai" data-reveal>
           <div class="feature-top"><span class="project-index">TECHNICAL PROJECT / 2025</span><span class="project-type">GRADUATION PROJECT</span></div>
           <div class="feature-body"><div><span class="project-symbol" aria-hidden="true">R<span>.</span></span><h3>Recommendy</h3><p class="project-summary">A platform connecting students with internships and scholarships through personalized recommendations.</p><a class="project-link" href="https://github.com/anwrrr/Recommendy" target="_blank" rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a></div><div class="feature-details"><div><span>THE CHALLENGE</span><p>Bring students, companies, and universities into one product, with distinct roles and opportunities that match each student’s skills.</p></div><div><span>WHAT I BUILT</span><p>Backend architecture and APIs for profiles, recommendations, resume parsing, real-time chat, subscriptions, and organization workflows.</p></div><div class="feature-tags"><span>.NET 8</span><span>Entity Framework Core</span><span>Ollama</span><span>SignalR</span><span>Stripe</span></div></div></div>
         </article>
         <div class="project-grid">
-          <article class="project-card" data-project-categories="web"><div class="project-card-top"><span>02 / WEB APPLICATION</span><span>TEAM PROJECT</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">S<span>.</span></span><h3>Sociala</h3><p>A social web application with posts, connections, real-time messaging, notifications, and moderation tools.</p></div><div class="project-card-bottom"><span>ASP.NET MVC · EF Core · SignalR</span><a href="https://github.com/anwrrr/Sociala" target="_blank" rel="noopener noreferrer" aria-label="View Sociala on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
-          <article class="project-card alternate" data-project-categories="ai"><div class="project-card-top"><span>03 / COMPUTER VISION</span><span>PROTOTYPE</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">G<span>.</span></span><h3>Gym Coach</h3><p>A Python experiment that uses computer vision to track exercise movement and repetitions.</p></div><div class="project-card-bottom"><span>Python · Computer Vision</span><a href="https://github.com/anwrrr/Gym-Coach" target="_blank" rel="noopener noreferrer" aria-label="View Gym Coach on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
+          <article class="project-card" data-project-categories="web" data-reveal><div class="project-card-top"><span>02 / WEB APPLICATION</span><span>TEAM PROJECT</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">S<span>.</span></span><h3>Sociala</h3><p>A social web application with posts, connections, real-time messaging, notifications, and moderation tools.</p></div><div class="project-card-bottom"><span>ASP.NET MVC · EF Core · SignalR</span><a href="https://github.com/anwrrr/Sociala" target="_blank" rel="noopener noreferrer" aria-label="View Sociala on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
+          <article class="project-card alternate" data-project-categories="ai" data-reveal><div class="project-card-top"><span>03 / COMPUTER VISION</span><span>PROTOTYPE</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">G<span>.</span></span><h3>Gym Coach</h3><p>A Python experiment that uses computer vision to track exercise movement and repetitions.</p></div><div class="project-card-bottom"><span>Python · Computer Vision</span><a href="https://github.com/anwrrr/Gym-Coach" target="_blank" rel="noopener noreferrer" aria-label="View Gym Coach on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
         </div>
         <p class="work-footnote">The ERP work is a private client project. Recommendy, Sociala, and Gym Coach are academic or team projects.</p>
       </div>
@@ -102,17 +102,17 @@
 
     <section class="section services-section" id="services" aria-labelledby="services-title">
       <div class="container">
-        <div class="section-intro light"><p class="section-kicker">03 / HOW I CAN HELP</p><div><h2 id="services-title">From idea to<br><em>working product.</em></h2><p>Bring me a new web application, an existing product that needs improvement, or a feature that must move from concept to implementation.</p></div></div>
+        <div class="section-intro light" data-reveal><p class="section-kicker">03 / HOW I CAN HELP</p><div><h2 id="services-title">From idea to<br><em>working product.</em></h2><p>Bring me a new web application, an existing product that needs improvement, or a feature that must move from concept to implementation.</p></div></div>
         <div class="services-list">
-          <details class="service-item"><summary><span class="service-number">01</span><h3>Full-stack web applications</h3><span class="service-plus" aria-hidden="true">+</span></summary><div class="service-detail"><p>Build Angular interfaces and .NET services together so the experience and business logic work as one product.</p><a href="#contact" data-service="Full-stack web application">Discuss this service <span aria-hidden="true">↗</span></a></div></details>
-          <details class="service-item"><summary><span class="service-number">02</span><h3>Backend &amp; API development</h3><span class="service-plus" aria-hidden="true">+</span></summary><div class="service-detail"><p>Design ASP.NET Core services, databases, authentication, and integrations around your product’s real workflows.</p><a href="#contact" data-service="Backend and API development">Discuss this service <span aria-hidden="true">↗</span></a></div></details>
-          <details class="service-item"><summary><span class="service-number">03</span><h3>AI features with a purpose</h3><span class="service-plus" aria-hidden="true">+</span></summary><div class="service-detail"><p>Add capabilities such as recommendations, document processing, and assistants where they make the product more useful.</p><a href="#contact" data-service="AI feature">Discuss this service <span aria-hidden="true">↗</span></a></div></details>
+          <details class="service-item" data-reveal><summary><span class="service-number">01</span><h3>Full-stack web applications</h3><span class="service-plus" aria-hidden="true">+</span></summary><div class="service-detail"><p>Build Angular interfaces and .NET services together so the experience and business logic work as one product.</p><a href="#contact" data-service="Full-stack web application">Discuss this service <span aria-hidden="true">↗</span></a></div></details>
+          <details class="service-item" data-reveal><summary><span class="service-number">02</span><h3>Backend &amp; API development</h3><span class="service-plus" aria-hidden="true">+</span></summary><div class="service-detail"><p>Design ASP.NET Core services, databases, authentication, and integrations around your product’s real workflows.</p><a href="#contact" data-service="Backend and API development">Discuss this service <span aria-hidden="true">↗</span></a></div></details>
+          <details class="service-item" data-reveal><summary><span class="service-number">03</span><h3>AI features with a purpose</h3><span class="service-plus" aria-hidden="true">+</span></summary><div class="service-detail"><p>Add capabilities such as recommendations, document processing, and assistants where they make the product more useful.</p><a href="#contact" data-service="AI feature">Discuss this service <span aria-hidden="true">↗</span></a></div></details>
         </div>
       </div>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-grid">
+      <div class="container contact-grid" data-reveal>
         <div><p class="section-kicker">04 / LET'S TALK</p><h2 id="contact-title">Have something<br><em>to build?</em></h2><p class="contact-intro">Tell me what you’re building and what you need help with.</p></div>
         <div class="contact-side">
           <form id="inquiry-form" class="inquiry-form" action="mailto:mo.anwar26102002@gmail.com" method="post" enctype="text/plain">
