@@ -20,6 +20,8 @@
 .client-project,
 .feature-project,
 .project-card { transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease; }
+.attendance-feature { margin-bottom: 18px; background: #1c3029; }
+.attendance-feature .feature-body h3 { font-size: clamp(3.4rem, 5.5vw, 6rem); }
 .feature-project:focus-within,
 .project-card:focus-within { outline: 2px solid #317a55; outline-offset: 3px; }
 .work-section a:focus-visible { outline-color: #317a55; }
@@ -33,6 +35,7 @@
   .project-card:hover { transform: translateY(-7px); box-shadow: 0 22px 44px rgba(16, 22, 27, .18); }
   .client-project:hover { background: #c9f6d8; }
   .feature-project:hover { background: #233138; }
+  .attendance-feature:hover { background: #264237; }
   .project-card:hover { background: #edf3e9; }
   .project-card.alternate:hover { background: #e3efe5; }
   .feature-project:hover .project-link span,
@@ -147,6 +150,7 @@
 }
 @media (max-width: 760px) {
   #about, #work, #services, #contact { scroll-margin-top: 136px; }
+  .attendance-feature .feature-body h3 { font-size: clamp(2.8rem, 9vw, 4.3rem); }
   .project-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-filter { font-size: 12px; padding-inline: 10px; }
   .project-browser .project-results { white-space: normal; }
@@ -158,6 +162,9 @@
   .inquiry-fields { grid-template-columns: 1fr; }
   .inquiry-options { grid-template-columns: 1fr; }
   .inquiry-options span { justify-content: flex-start; min-height: 46px; padding-inline: 14px; font-size: 14px; }
+}
+@media (max-width: 420px) {
+  .attendance-feature .feature-body h3 { font-size: clamp(2.25rem, 10vw, 3rem); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
