@@ -1,3 +1,39 @@
+.project-browser {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid #b8c8ba;
+  border-bottom: 1px solid #b8c8ba;
+  padding: 20px 0;
+  margin-bottom: 18px;
+}
+.project-browser-label { color: #60766a; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+.project-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.project-filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11px;
+  min-height: 44px;
+  padding: 8px 13px;
+  border: 1px solid #91aa99;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 700 13px 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+.project-filter span { color: #617568; font-family: 'Space Grotesk', sans-serif; font-size: 11px; }
+.project-filter[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: white; }
+.project-filter[aria-pressed="true"] span { color: var(--mint); }
+.project-filter:hover:not([aria-pressed="true"]) { background: #e1e9df; }
+.project-filter:focus-visible { outline: 3px solid #317a55; outline-offset: 3px; }
+.project-browser .project-results { margin: 0; color: #4f6657; font-size: 13px; white-space: nowrap; }
+.work-section [data-project-categories][hidden],
+.project-grid[hidden] { display: none !important; }
+.project-grid.single-visible { grid-template-columns: minmax(0, 650px); }
+
 .service-item { border-bottom: 1px solid #53675a; }
 .service-item summary {
   display: grid;
@@ -62,12 +98,16 @@
 .contact-side .contact-email { margin-top: 18px; }
 
 @media (max-width: 950px) {
+  .project-browser { grid-template-columns: 1fr; gap: 12px; }
   .contact-grid { display: block; }
   .contact-grid h2 { margin-bottom: 20px; }
   .contact-intro { margin-bottom: 35px; }
   .contact-side { max-width: 700px; }
 }
 @media (max-width: 760px) {
+  .project-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-filter { font-size: 12px; padding-inline: 10px; }
+  .project-browser .project-results { white-space: normal; }
   .service-item summary { grid-template-columns: 35px 1fr 18px; gap: 15px; padding: 29px 0; }
   .service-item h3 { font-size: 26px; }
   .service-detail { margin-left: 50px; padding: 0 0 29px; }

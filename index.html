@@ -71,20 +71,30 @@
     <section class="section work-section" id="work" aria-labelledby="work-title">
       <div class="container">
         <div class="section-intro"><p class="section-kicker">02 / SELECTED WORK</p><div><h2 id="work-title">Proof in the<br><em>build.</em></h2><p>Client delivery and technical projects spanning the interface people use and the systems that keep it running.</p></div></div>
-        <article class="client-project" aria-labelledby="client-project-title">
+        <div class="project-browser" role="group" aria-label="Filter projects">
+          <span class="project-browser-label">EXPLORE BY FOCUS</span>
+          <div class="project-filters">
+            <button type="button" class="project-filter" data-filter="all" aria-pressed="true">All projects <span>04</span></button>
+            <button type="button" class="project-filter" data-filter="client" aria-pressed="false">Client work <span>01</span></button>
+            <button type="button" class="project-filter" data-filter="web" aria-pressed="false">Web products <span>03</span></button>
+            <button type="button" class="project-filter" data-filter="ai" aria-pressed="false">AI &amp; vision <span>02</span></button>
+          </div>
+          <p class="project-results" id="project-results" role="status" aria-live="polite">Showing all 4 projects</p>
+        </div>
+        <article class="client-project" data-project-categories="client web" aria-labelledby="client-project-title">
           <div class="client-project-heading"><span>CLIENT WORK / PRIVATE PROJECT</span><span>FULL-STACK DELIVERY</span></div>
           <div class="client-project-body">
             <div><span class="client-project-mark" aria-hidden="true">C<span>.</span></span><h3 id="client-project-title">Private ERP platform</h3><p>A business system covering inventory, sales, invoicing, reporting, and user access. The client’s name and implementation details remain private.</p></div>
             <div><span class="client-project-label">MY CONTRIBUTION</span><p>I worked across the frontend and backend, building user-facing workflows and the services behind the ERP’s core features.</p><div class="client-project-tags"><span>Frontend</span><span>Backend</span><span>Business workflows</span></div></div>
           </div>
         </article>
-        <article class="feature-project">
+        <article class="feature-project" data-project-categories="web ai">
           <div class="feature-top"><span class="project-index">TECHNICAL PROJECT / 2025</span><span class="project-type">GRADUATION PROJECT</span></div>
           <div class="feature-body"><div><span class="project-symbol" aria-hidden="true">R<span>.</span></span><h3>Recommendy</h3><p class="project-summary">A platform connecting students with internships and scholarships through personalized recommendations.</p><a class="project-link" href="https://github.com/anwrrr/Recommendy" target="_blank" rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a></div><div class="feature-details"><div><span>THE CHALLENGE</span><p>Bring students, companies, and universities into one product, with distinct roles and opportunities that match each student’s skills.</p></div><div><span>WHAT I BUILT</span><p>Backend architecture and APIs for profiles, recommendations, resume parsing, real-time chat, subscriptions, and organization workflows.</p></div><div class="feature-tags"><span>.NET 8</span><span>Entity Framework Core</span><span>Ollama</span><span>SignalR</span><span>Stripe</span></div></div></div>
         </article>
         <div class="project-grid">
-          <article class="project-card"><div class="project-card-top"><span>02 / WEB APPLICATION</span><span>TEAM PROJECT</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">S<span>.</span></span><h3>Sociala</h3><p>A social web application with posts, connections, real-time messaging, notifications, and moderation tools.</p></div><div class="project-card-bottom"><span>ASP.NET MVC · EF Core · SignalR</span><a href="https://github.com/anwrrr/Sociala" target="_blank" rel="noopener noreferrer" aria-label="View Sociala on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
-          <article class="project-card alternate"><div class="project-card-top"><span>03 / COMPUTER VISION</span><span>PROTOTYPE</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">G<span>.</span></span><h3>Gym Coach</h3><p>A Python experiment that uses computer vision to track exercise movement and repetitions.</p></div><div class="project-card-bottom"><span>Python · Computer Vision</span><a href="https://github.com/anwrrr/Gym-Coach" target="_blank" rel="noopener noreferrer" aria-label="View Gym Coach on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
+          <article class="project-card" data-project-categories="web"><div class="project-card-top"><span>02 / WEB APPLICATION</span><span>TEAM PROJECT</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">S<span>.</span></span><h3>Sociala</h3><p>A social web application with posts, connections, real-time messaging, notifications, and moderation tools.</p></div><div class="project-card-bottom"><span>ASP.NET MVC · EF Core · SignalR</span><a href="https://github.com/anwrrr/Sociala" target="_blank" rel="noopener noreferrer" aria-label="View Sociala on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
+          <article class="project-card alternate" data-project-categories="ai"><div class="project-card-top"><span>03 / COMPUTER VISION</span><span>PROTOTYPE</span></div><div class="project-card-main"><span class="card-glyph" aria-hidden="true">G<span>.</span></span><h3>Gym Coach</h3><p>A Python experiment that uses computer vision to track exercise movement and repetitions.</p></div><div class="project-card-bottom"><span>Python · Computer Vision</span><a href="https://github.com/anwrrr/Gym-Coach" target="_blank" rel="noopener noreferrer" aria-label="View Gym Coach on GitHub">View project <span aria-hidden="true">↗</span></a></div></article>
         </div>
         <p class="work-footnote">The ERP work is a private client project. Recommendy, Sociala, and Gym Coach are academic or team projects.</p>
       </div>
