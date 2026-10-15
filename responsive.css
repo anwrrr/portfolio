@@ -82,3 +82,14 @@
   .hero h1 { font-size: 3.25rem; }
   .nav-cta { padding-inline: 8px; }
 }
+
+/* Keep the same gap between project blocks in any order or filter state. */
+.feature-project { margin-bottom: 18px; }
+.project-grid { margin-top: 0; }
+
+/* Three quick facts sit side by side in the About section. */
+.about-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 420px) {
+  .about-facts div + div { padding-left: 14px; }
+  .about-facts strong { font-size: 28px; }
+}
