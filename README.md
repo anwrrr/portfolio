@@ -1,6 +1,6 @@
 # Mohamed Anwar — Portfolio
 
-Static portfolio for Mohamed Anwar, a full-stack .NET and applied AI developer.
+Static portfolio for Mohamed Anwar, a .NET and applied AI developer.
 
 ## Site
 
